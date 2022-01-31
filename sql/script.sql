@@ -8,6 +8,7 @@ USE tienda_fotos_online;
 CREATE TABLE cliente(
     idCliente tinyint UNSIGNED primary key AUTO_INCREMENT not null,
     nombre varchar(50) not null,
+    password varchar(20) not null,
     direccion varchar(60) not null
 );
 CREATE TABLE pedido(
