@@ -9,9 +9,22 @@
         <title>Tienda Fotos Online</title>
     </head>
     <body>
-        <h1>Tienda de Fotos Online</h1>
-        <form action="" method="post">
-            
-        </form>
+        <header>
+            <h1>Tienda de Fotos Online</h1>
+            <nav>
+                <ul>
+                    <li><a href="./src/views/v_registro.php">Registro Usuario</a></li>
+                    <li>Inicio Sesión</li>
+                    <li>Realizar Pedido</li>
+                    <li>Consultar Pedido</li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <p>
+                Página dedicada a la creación de pedidos, dónde los clientes podrán realizar pedidos, y en ellos se guardará la fotografía de los productos que quieran
+                pedir de forma online.
+            </p>
+        </main>
     </body>
 </html>
