@@ -20,7 +20,7 @@
             <nav>
                 <ul>
                     <li><a href="./src/views/v_registro.php">Registro Usuario</a></li>
-                    <li>Inicio Sesión</li>
+                    <li><a href="./src/views/v_iniciosesion.php">Inicio Sesión</a></li>
                     <li>Realizar Pedido</li>
                     <li>Consultar Pedido</li>
                 </ul>
@@ -32,9 +32,9 @@
                 <label>NombreUsuario:</label>
                 <input type="text" placeholder="NombreUsuario" name="nombreusuario">
                 <label>Contraseña:</label>
-                <input type="text" placeholder="Contraseña" name="password">
+                <input type="password" placeholder="Contraseña" name="password">
                 <label>Repetir contraseña:</label>
-                <input type="text" placeholder="Repetir contraseña" name="password2">
+                <input type="password" placeholder="Repetir contraseña" name="password2">
                 <label>Dirección:</label>
                 <input type="text" placeholder="Dirección" name="direccion">
                 <input type="submit" value="Enviar" name="enviar">
@@ -42,7 +42,7 @@
             <?php
                 require_once __DIR__ . '/../controller/controlador.php';
                 $controlador=new Controlador();
-                if (isset($_POST)) {
+                if (isset($_POST['enviar'])) {
                     $controlador->altaCliente();
                 }
             ?>

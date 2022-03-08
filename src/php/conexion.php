@@ -1,6 +1,6 @@
 <?php
     //LLamamos al archivo donde se encuentran las constantes de la base de datos
-    require_once './configdb.php';
+    require_once __DIR__. '/configdb.php';
 
     class Conexion {
         private $conexion=null;

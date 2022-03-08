@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if(isset($_SESSION['idCliente'])){
+        header('Location: ../../index.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -5,7 +11,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="jtoscanoreyes.guadalupe@alumnado.fundacionloyola.net>">
-        <link rel="stylesheet" href="src/css/style.css">
+        <link rel="stylesheet" href="../css/style.css">
         <title>Tienda Fotos Online</title>
     </head>
     <body>
@@ -21,10 +27,14 @@
             </nav>
         </header>
         <main>
-            <p>
-                Página dedicada a la creación de pedidos, dónde los clientes podrán realizar pedidos, y en ellos se guardará la fotografía de los productos que quieran
-                pedir de forma online.
-            </p>
+            <h2>Inicio de Sesión</h2>
+            <form action="#" method="post">
+                <label>Nombre de Usuario: </label>
+                <input type="text" placeholder="NombreUsuario" name="nombreusuario" />
+                <label>Contraseña: </label>
+                <input type="text" placeholder="Contraseña" name="password">
+                <input type="submit" value="Enviar" name="enviar">
+            </form>
         </main>
     </body>
 </html>
