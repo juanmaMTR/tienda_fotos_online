@@ -10,6 +10,23 @@ class Modelo {
         $conexion=new Conexion();
         $this->conexion=$conexion->conexion();
     }
+    function cierroSesion(){
+        unset($_SESSION['idCliente']);
+        session_destroy();
+        echo('La sesión se ha cerrado correctamente');
+        header("Refresh:2; url=../../index.php");
+    }
+    function iniciarSesion(){
+        $stmt=$this->conexion->prepare("SELECT idCliente,nombre FROM cliente WHERE nombre=? AND password=?;");
+        $stmt->bind_param("ss",$_POST['nombreusuario'],$_POST['password']);
+        $stmt->execute();
+        $resultado=$stmt->get_result();
+        while($fila=$resultado->fetch_assoc()){
+            $_SESSION['idCliente']=$fila['idCliente'];
+            echo ("Se ha iniciado sesión con el usuario ". $fila['nombre']);
+        }
+        
+    }
     function consultar($sql){
         return $this->conexion->query($sql);
     }

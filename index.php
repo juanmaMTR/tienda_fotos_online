@@ -17,6 +17,7 @@
                     <li><a href="./src/views/v_iniciosesion.php">Inicio Sesión</a></li>
                     <li>Realizar Pedido</li>
                     <li>Consultar Pedido</li>
+                    <li><a href="./src/views/v_cerrarsesion.php">Cerrar Sesión</a></li>
                 </ul>
             </nav>
         </header>

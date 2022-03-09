@@ -9,6 +9,12 @@ class Controlador extends Modelo{
     function __construct(){
         parent:: __construct();
     }
+    function cerrarSesion(){
+        $this->cierroSesion();
+    }
+    function inicioSesion(){
+        $this->iniciarSesion();
+    }
     function altaCliente(){
         if($_POST['nombreusuario']==''){    //Compruebo que el nombre de usuario no se queda en blanco
             echo ('No se puede quedar el nombre del usuario en blanco'); 

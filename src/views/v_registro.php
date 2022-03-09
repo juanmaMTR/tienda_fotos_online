@@ -19,8 +19,8 @@
             <h1>Tienda de Fotos Online</h1>
             <nav>
                 <ul>
-                    <li><a href="./src/views/v_registro.php">Registro Usuario</a></li>
-                    <li><a href="./src/views/v_iniciosesion.php">Inicio Sesión</a></li>
+                    <li><a href="./v_registro.php">Registro Usuario</a></li>
+                    <li><a href="./v_iniciosesion.php">Inicio Sesión</a></li>
                     <li>Realizar Pedido</li>
                     <li>Consultar Pedido</li>
                 </ul>
