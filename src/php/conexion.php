@@ -8,5 +8,8 @@
         function conexion(){
             return $this->conexion=new mysqli(SERVERNAME,USERNAME,PASSWORD,DATABASE);
         }
+        function consultar($sql){
+            return $this->conexion->query($sql);
+        }
     }
 ?>
